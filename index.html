@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Kalkulator Matematik Segitiga</title>
+</head>
+<body>
+  <main>
+    <div class="header">
+      <h1>Welcome to Katik</h1>
+      <p>Hai Sobat, Selamat datang di Katik! <br> Sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangun datar</p>
+      <div class="button">
+        <button onclick="rumus('luas')">Luas Segitiga</button>
+        <button onclick="rumus('keliling')">Keliling Segitiga</button>
+      </div>
+    </div>
+    <div class="main-class">
+      <div id="luas" class="content">
+        <h1 class="judul">Luas Segitiga</h1>
+        <p>Rumus Luas Segitiga yaitu : </p>
+        <h5>L = 1/2 x a x t</h5>
+        <p>Di mana : <br>L = Luas <br>a = Panjang Alas <br>t = Tinggi</p>
+        <hr>
+        <h2>Hitung Luas Segitiga</h2>
+        <div class="data">
+          <input type="text" name="alas" id="alas" placeholder="Masukkan Alas" required>
+          <input type="text" name="tinggi" id="tinggi" placeholder="Masukkan Tinggi" required>
+        </div>
+        <div class="hasil">
+          <p class="rumus"></p>
+          <p class="penyelesaian"></p>
+          <p class="hasilnya"></p>
+        </div>
+        <button onclick="luas(alas,tinggi)">Hitung</button>
+      </div>
+      <div id="keliling" class="content">
+        <h1 class="judul">Keliling Segitiga</h1>
+        <p>Rumus Keliling Segitiga yaitu : </p>
+        <h5>K = S1 + S2 + S3</h5>
+        <p>Di mana : <br>K = Keliling <br>S1 = Sisi A <br>S2 = Sisi B <br>S3 = Sisi C</p>
+        <hr>
+        <h2>Hitung Keliling Segitiga</h2>
+        <div class="data">
+          <input type="text" name="s1" id="s1" placeholder="Masukkan Sisi 1" required>
+          <input type="text" name="s2" id="s2" placeholder="Masukkan Sisi 2" required>
+          <input type="text" name="s3" id="s3" placeholder="Masukkan Sisi 3" required>
+        </div>
+        <div class="hasil">
+          <p class="rumus"></p>
+          <p class="penyelesaian"></p>
+          <p class="hasilnya"></p>
+        </div>
+        <button onclick="keliling(s1,s2,s3)">Hitung</button>
+      </div>
+    </div>
+  </main>
+  <script src="./js/script.js"></script>
+</body>
+</html>
